@@ -1,0 +1,30 @@
+{
+    "version": 2,
+    "builds": [
+      {
+        "src": "reactapp/package.json",
+        "use": "@vercel/static-build",
+        "config": { "distDir": "reactapp/build" }
+      },
+      {
+        "src": "djangoproj/**",
+        "use": "@vercel/python"
+      }
+    ],
+    "routes": [
+      { "handle": "filesystem" },
+      {
+        "src": "/static/(.*)",
+        "dest": "djangoproj/static/$1"
+      },
+      {
+        "src": "/media/(.*)",
+        "dest": "djangoproj/media/$1"
+      },
+      {
+        "src": "/(.*)",
+        "dest": "/djangoproj/wsgi.py"
+      }
+    ]
+  }
+  
