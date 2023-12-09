@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import Button from '@mui/material/Button';
+
 import { Link } from 'react-router-dom';
 import './App.css';
 import img1 from './images/love.jpeg';
@@ -19,19 +19,13 @@ import l9 from './images/l9.jpg'
 
 import Stack from '@mui/material/Stack';
 import { pink } from '@mui/material/colors';
-import SvgIcon, { SvgIconProps } from '@mui/material/SvgIcon';
+
 import InstagramIcon from '@mui/icons-material/Instagram';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import EmailIcon from '@mui/icons-material/Email';
 
-function HomeIcon(props) {                       //icons 
-  return (
-    <SvgIcon {...props}>
-      <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />
-    </SvgIcon>
-  );
-}
+
 
 
 const breakPoints = [
