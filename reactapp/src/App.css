@@ -14,7 +14,7 @@ html,body{
 
 
 #yourcomponent{
-  background-image: url('./images/background.webp'); /* Specify the path to your image */
+  background-image: url('./background.webp'); /* Specify the path to your image */
   background-size: 100% 100%;/* Adjust the size as needed (cover, contain, etc.) */
   background-repeat: no-repeat;
   
@@ -120,7 +120,7 @@ html,body{
 
 
 #yourcomponent1{
-  background-image: url('./images/b1.png'); /* Specify the path to your image */
+  background-image: url('./b1.png'); /* Specify the path to your image */
   background-size: 100% 100%;/* Adjust the size as needed (cover, contain, etc.) */
   background-repeat: no-repeat;
  background-color: indianred;

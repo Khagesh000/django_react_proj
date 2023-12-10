@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import RoomJoinPage from './RoomJoinPage';
 import CreateRoomPage from './CreateRoomPage';
-import img1 from './images/love.jpeg'
+import img1 from './love.jpeg'
 
 
 
@@ -15,6 +15,7 @@ import Radio from '@mui/material/Radio';
 import RadioGroup from '@mui/material/RadioGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import FormControl from '@mui/material/FormControl';
+
 
 import Stack from '@mui/material/Stack';
 import { pink } from '@mui/material/colors';
@@ -101,26 +102,26 @@ export default class HomePage extends Component {
 handleButtonClick = () => {
     const { num, num1 } = this.state;
 
-    const isValid = this.validateInput();
+    
 
     if (!this.validateInput()) {
       return;
   };
   console.log('Further logic...');
 
-  // Use the calculateResult function to get the result
+
   const result = this.calculateResult(num, num1);
 
-  // Update the result state with the calculated result
+  
   this.setState({
     result: result,
-    errorMessages: { demo1: '', demo2: '' }, // Reset error messages
+    errorMessages: { demo1: '', demo2: '' }, 
   });
 }
 
 
 calculateResult = (num, num1) => {
-  // Implement the logic to calculate the result using num1 and num2
+  
   const value1 = this.calculateValue(num);
   const value2 = this.calculateValue(num1);
 
@@ -206,7 +207,7 @@ return (
                         <Link to="/create" class="nav-link">About Us</Link>
                         </li>
                         <li class="nav-item dropdown">
-                          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          <a href='/' class="nav-link dropdown-toggle"  id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Dropdown link
                           </a>
                           <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
@@ -224,7 +225,7 @@ return (
               </div>
               
               
-              <section id='input-in'>
+              <section id='input-in' style={{backgroundColor:'lightblue'}}>
                 
                 <form method="post" name="form" onSubmit={this.handleFormSubmit}></form>
                 
@@ -364,7 +365,7 @@ return (
                       <section>
                     <nav class="navbar navbar-dark bg-dark text-white">
                    <div class="container">
-                  <a class="navbar-brand" href="#">
+                  <a class="navbar-brand" href='/'>
                   <img src={img1} alt='' width='30' height='24' />
                   </a>
 

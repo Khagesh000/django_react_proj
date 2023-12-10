@@ -5,7 +5,7 @@ import Radio from '@mui/material/Radio';
 import RadioGroup from '@mui/material/RadioGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import FormControl from '@mui/material/FormControl';
-import img1 from './images/love.jpeg';
+import img1 from './love.jpeg';
 import './App.css';
 
 
@@ -17,8 +17,6 @@ import InstagramIcon from '@mui/icons-material/Instagram';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import EmailIcon from '@mui/icons-material/Email';
-
-
 
 
 
@@ -130,7 +128,7 @@ export default class RoomJoinPage extends Component {
                     <Link to="/create" className="nav-link">About Us</Link>
                     </li>
                     <li className="nav-item dropdown">
-                      <a className="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      <a href='/' className="nav-link dropdown-toggle"  id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Dropdown link
                       </a>
                       <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
@@ -293,7 +291,7 @@ export default class RoomJoinPage extends Component {
    <section>
                     <nav class="navbar navbar-dark bg-dark text-white">
                    <div class="container">
-                  <a class="navbar-brand" href="#">
+                  <a class="navbar-brand" href='/'>
                   <img src={img1} alt='' width='30' height='24' />
                   </a>
 

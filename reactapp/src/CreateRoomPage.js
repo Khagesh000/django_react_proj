@@ -5,16 +5,16 @@ import 'slick-carousel/slick/slick-theme.css';
 
 import { Link } from 'react-router-dom';
 import './App.css';
-import img1 from './images/love.jpeg';
-import l1 from './images/l1.jpg'
-import l2 from './images/l2.jpg'
-import l3 from './images/l3.jpg'
-import l4 from './images/l4.jpg'
-import l5 from './images/l5.jpg'
-import l6 from './images/l6.jpg'
-import l7 from './images/l7.jpg'
-import l8 from './images/l8.jpg'
-import l9 from './images/l9.jpg'
+import img1 from './love.jpeg';
+import l1 from './l1.jpg';
+import l2 from './l2.jpg'
+import l3 from './l3.jpg'
+import l4 from './l4.jpg'
+import l5 from './l5.jpg'
+import l6 from './l6.jpg'
+import l7 from './l7.jpg'
+import l8 from './l8.jpg'
+import l9 from './l9.jpg'
 
 
 import Stack from '@mui/material/Stack';
@@ -28,12 +28,7 @@ import EmailIcon from '@mui/icons-material/Email';
 
 
 
-const breakPoints = [
-  { width: 1, itemsToShow: 1 },
-  { width: 550, itemsToShow: 2 },
-  { width: 768, itemsToShow: 3 },
-  { width: 1200, itemsToShow: 4 },
-];
+
 
 const images = [
   l1,
@@ -109,7 +104,7 @@ export default class CreateRoomPage extends Component {
                     <Link to="/join" className="nav-link">FRAMES</Link>
                     </li>
                     <li className="nav-item dropdown">
-                      <a className="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      <a href='/' className="nav-link dropdown-toggle"  id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Dropdown link
                       </a>
                       <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
@@ -171,7 +166,7 @@ export default class CreateRoomPage extends Component {
         <section>
                     <nav class="navbar navbar-dark bg-dark text-white">
                    <div class="container">
-                  <a class="navbar-brand" href="#">
+                  <a class="navbar-brand" href='/'>
                   <img src={img1} alt='' width='30' height='24' />
                   </a>
 
