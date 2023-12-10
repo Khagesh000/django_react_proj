@@ -31,15 +31,15 @@ import EmailIcon from '@mui/icons-material/Email';
 
 
 const images = [
-  require('./l1.jpg').default,
-  require('./l2.jpg').default,
-  require('./l3.jpg').default,
-  require('./l4.jpg').default,
-  require('./l5.jpg').default,
-  require('./l6.jpg').default,
-  require('./l7.jpg').default,
-  require('./l8.jpg').default,
-  require('./l9.jpg').default,
+ l1,
+ l2,
+ l3,
+ l4,
+ l5,
+ l6,
+ l7,
+ l8,
+ l9
 
 
 ];
