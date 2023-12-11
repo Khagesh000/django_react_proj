@@ -146,6 +146,9 @@ export default class RoomJoinPage extends Component {
           </div>
         </section>
 
+
+
+         <section style={{backgroundColor:'lightpink'}}>
         <div id='yourcomponent1'>
           <p className='input-p'>FRAMES</p>
 
@@ -232,7 +235,7 @@ export default class RoomJoinPage extends Component {
 
         </div>
 
-        
+        </section>
         <section>
 
 

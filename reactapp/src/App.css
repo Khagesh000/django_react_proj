@@ -1,40 +1,22 @@
-html,body{
+/* Reset styles */
+html, body {
   height: 100%;
   margin: 0;
   padding: 0;
 }
 
+/* Shared styles for your components */
+#yourcomponent, #yourcomponent1 {
+  width: 30%;
+  margin-left: 30%;
+}
 
-
-#app{
+.input {
   width: 100%;
-  height: 100%;
-  display: flex;
 }
 
-
-#yourcomponent{
-  background-image: url('./background.webp'); /* Specify the path to your image */
-  background-size: 100% 100%;/* Adjust the size as needed (cover, contain, etc.) */
-  background-repeat: no-repeat;
-  
-  
-  
-}
-
-#yourcomponent .input{
-      width: 30%;
-      margin-left: 30%;
-}
-
-#yourcomponent .input .input-bar{
-  color: rgba(13, 14, 14, 0.627);
-  
- 
-}
-
-#yourcomponent  .input-p{
-  color: rgb(27, 23, 23);
+.input-p {
+  color: rgb(15, 14, 15);
   align-items: center;
   justify-content: center;
   margin-left: 35%;
@@ -47,35 +29,32 @@ html,body{
   display: inline-block;
 }
 
-#yourcomponent .input-p:before {
+.input-p:before,
+.input-p:after {
   content: attr(data-text);
   position: absolute;
   top: 0;
   left: 0;
   z-index: -1;
+}
+
+.input-p:before {
   color: #4CAF50; /* Adjust the color code as needed */
   transform: translate(-5px, 5px);
 }
 
-#yourcomponent .input-p:after {
-  content: attr(data-text);
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
+.input-p:after {
   color: #FFC107; /* Adjust the color code as needed */
-  transform: translate(5px, -5px); 
-
+  transform: translate(5px, -5px);
 }
 
-/* Center the result and change its color */
-#yourcomponent .input-group-text {
+.input-group-text {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-#yourcomponent .input-group-text p.bold-and-blink {
+.input-group-text p.bold-and-blink {
   font-weight: 1000;
   font-size: 1.5em;
   display: inline-block;
@@ -84,9 +63,8 @@ html,body{
   color: #e6e3e3 !important; /* Adjust the color code as needed */
 }
 
-/* 3D effect for the result */
-#yourcomponent .input-group-text p.bold-and-blink:before,
-#yourcomponent .input-group-text p.bold-and-blink:after {
+.input-group-text p.bold-and-blink:before,
+.input-group-text p.bold-and-blink:after {
   content: attr(data-text);
   position: absolute;
   top: 0;
@@ -94,769 +72,50 @@ html,body{
   z-index: -1;
 }
 
-#yourcomponent .input-group-text p.bold-and-blink:before {
+.input-group-text p.bold-and-blink:before {
   color: #4CAF50; /* Adjust the color code as needed */
   transform: translate(-5px, 5px);
 }
 
-#yourcomponent .input-group-text p.bold-and-blink:after {
+.input-group-text p.bold-and-blink:after {
   color: #FFC107; /* Adjust the color code as needed */
   transform: translate(5px, -5px);
 }
 
-/* Blinking animation */
-@keyframes blink {
-  0%, 100% {
-    opacity: 1;
+/* Media queries for responsive design */
+
+/* Small screens (phones) */
+@media (max-width: 576px) {
+  #yourcomponent, #yourcomponent1 {
+    width: 80%;
+    margin-left: 10%;
   }
-  50% {
-    opacity: 0;
-  }
-}
 
-#yourcomponent .input-group-text p.bold-and-blink {
-  animation: blink 1s infinite; /* Adjust the duration as needed */
-}
-
-
-#yourcomponent1{
-  background-image: url('./b1.png'); /* Specify the path to your image */
-  background-size: 100% 100%;/* Adjust the size as needed (cover, contain, etc.) */
-  background-repeat: no-repeat;
- background-color: indianred;
-  
-  
-}
-
-
-#yourcomponent1 .input{
-  width: 30%;
-  margin-left: 30%;
-}
-
-
-#yourcomponent1  .input-p{
-  color: rgb(6, 6, 6);
-  align-items: center;
-  justify-content: center;
-  margin-left: 40%;
-  padding-top: 2%;
-  margin-bottom: 5%;
-  font-weight: bold;
-  font-size: 2em;
-  text-transform: uppercase;
-  position: relative;
-  display: inline-block;
-}
-
-
-#yourcomponent1 .input-p:before {
-  content: attr(data-text);
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  color: #4CAF50; /* Adjust the color code as needed */
-  transform: translate(-5px, 5px);
-}
-
-#yourcomponent1 .input-p:after {
-  content: attr(data-text);
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  color: #FFC107; /* Adjust the color code as needed */
-  transform: translate(5px, -5px); 
-
-}
-
-#yourcomponent1 .input-group-text {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-
-  
-}
-
-.grayBackground {
-  background-color: gray;
-}
-
-
-#yourcomponent1 .input-group-text p.bold-and-blink {
-  font-weight: 1000;
-  font-size: 1.5em;
-  display: inline-block;
-  text-transform: uppercase;
-  position: relative;
-  color: #090808 !important; /* Adjust the color code as needed */
-}
-
-/* 3D effect for the result */
-#yourcomponent1 .input-group-text p.bold-and-blink:before,
-#yourcomponent1 .input-group-text p.bold-and-blink:after {
-  content: attr(data-text);
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-}
-
-#yourcomponent1 .input-group-text p.bold-and-blink:before {
-  color: #4CAF50; /* Adjust the color code as needed */
-  transform: translate(-5px, 5px);
-}
-
-#yourcomponent1 .input-group-text p.bold-and-blink:after {
-  color: #FFC107; /* Adjust the color code as needed */
-  transform: translate(5px, -5px);
-}
-
-/* Blinking animation */
-@keyframes blink {
-  0%, 100% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0;
+  .input-p {
+    margin-left: 10%;
   }
 }
 
-#yourcomponent1 .input-group-text p.bold-and-blink {
-  animation: blink 1s infinite; /* Adjust the duration as needed */
-}
-
-.css-1a5icme {
-  display: inline-flex;
-  -webkit-box-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  justify-content: center;
-  position: relative;
-  box-sizing: border-box;
-  -webkit-tap-highlight-color: transparent;
-  background-color: transparent;
-  outline: 0px;
-  border: 0px;
-  margin: 0px;
-  cursor: pointer;
-  user-select: none;
-  vertical-align: middle;
-  appearance: none;
-  text-decoration: none;
-  border-radius: 50%;
-  color: rgba(0, 0, 0, 0.6);
-}
-
-.css-1a5icme.Mui-checked {
-  color: #212529;
-}
-
-
-
-
-
-
-
-
-
-
-
-/*  Adjusting Screen sizes  -----------------------------------------*/
-
-
-@media (max-width: 270px){
-
-  #yourcomponent .input {
-    margin-left: 25%;
-    width: 56%;
-    padding: 0;
-    flex-direction: row;
-    margin-bottom: 0;
-    
-}
-
-  #yourcomponent .input-p {
-    align-items: center;
-    text-align: center;
-    color: #131212;
-    display: inline-block;
-    font-size: 1.0em;
-    font-weight: 500;
-    justify-content: center;
-    margin-bottom: 5%;
-    margin-left: 25%;
-    padding-top: 2%;
-    position: relative;
-    text-transform: uppercase;
-}
-
-.navbar {
-  position: relative;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  padding-top: .0rem;
-  padding-bottom: .0rem;
-}
-
-.navbar-toggler {
-  padding: .25rem .75rem;
-  font-size: 0.70rem;
-  line-height: 0.5;
-  background-color: transparent;
-}
-
-
-
-#yourcomponent .input-group-text p.bold-and-blink {
-  color: #e6e3e3!important;
-  display: inline-block;
-  font-size: 1em;
-  font-weight: 800;
-  position: relative;
-  text-transform: uppercase;
-}
-
-p {
-  margin-top: 0;
-  margin-bottom: 0.6rem;
-}
-.mb-3 {
-  margin-bottom: 0rem!important;
-}
-#table th{
-  font-size: 0.8em;
-  font-weight: 600;
-}
-#table td{
-  font-size: 0.6em;
-  font-weight: 400;
-}
-#input-in{
-  padding: 0;
-
-}
-#input-in .input-p{
-  padding-bottom: 0px;
-  margin-bottom: 10px;
-  color: #ca0a8b;
-}
-.input-group.input-radio {
-  font-size: 20px;
- 
-}
-
-#input-in .form-radio{
-  padding-bottom: 0;
- margin-bottom: 0;
- flex-direction: row;
- font-size: 0.6em;
- padding: 0;
- margin: 0;
- 
-  display: flex;
-  
-
-}
-
-.p-3 {
-  padding: 0.3rem!important;
-}
-
-.css-1a5icme {
-  
-  cursor: pointer;
-  
-  padding: 0;
-
-  width: 10px;
-  height: 10px;
-  
-  
-  color: rgba(0, 0, 0, 0.6);
-}
-
-.css-9l3uo3 {
-  margin: 0px;
-  font-family: Roboto, Helvetica, Arial, sans-serif;
-  font-weight: 300;
-  font-size: 0.8rem;
-  line-height: 1;
-  letter-spacing: 0.00938em;
-}
-
-.input-group-text {
-
-  align-items: center;
-  line-height: 1.5;
-  text-align: center;
-  white-space: nowrap;
-  border: 1px solid #ced4da;
-  border-radius: .25rem;
-  margin-bottom: 5px;
-  margin-right: 10px;  
-}
-
-.input-group {
-  flex-direction: column; /* Stack elements vertically */
-}
-.css-1a5icme.Mui-checked {
-  color: #212529;
-}
-
-
-
-/* Frames page in 270px   */
-
-#yourcomponent1 .input {
-  margin-left: 25%;
-  width: 56%;
-  padding: 0;
-  flex-direction: row;
-  margin-bottom: 0;
-  
-}
-
-#yourcomponent1 .input-p {
-  align-items: center;
-  text-align: center;
-  color: #010101;
-  display: inline-block;
-  font-size: 1.0em;
-  font-weight: 500;
-  justify-content: center;
-  margin-bottom: 5%;
-  margin-left: 25%;
-  padding-top: 2%;
-  position: relative;
-  text-transform: uppercase;
-}
-
-.css-1a5icme.Mui-checked {
-  color: #212529;
-}
-
-#yourcomponent1 .input-group-text p.bold-and-blink {
-  color: #e6e3e3!important;
-  display: inline-block;
-  font-size: 1em;
-  font-weight: 800;
-  position: relative;
-  text-transform: uppercase;
-}
-
-
-
-/*       About page         */
-
-element.style {
-  width: 100%;
-  height: 50vh;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-}
-
-
-@media (min-width: 270px) and (max-width: 480px) {
-
-  #yourcomponent .input-p {
-    align-items: center;
-    color: #080708;
-    display: inline-block;
-    font-size: 1.6em;
-    font-weight: 500;
-    justify-content: center;
+/* Medium screens (tablets) */
+@media (min-width: 577px) and (max-width: 768px) {
+  #yourcomponent, #yourcomponent1 {
+    width: 60%;
     margin-left: 20%;
-    padding-top: 2%;
-    position: relative;
-    text-transform: uppercase;
-}
-
-#yourcomponent .input {
-  margin-left: 17%;
-  width: 70%;
-}
-
-.p-3 {
-  padding: 0.6rem!important;
-}
-
-.mb-3 {
-  margin-bottom: 0rem!important;
-}
-
-.input-group-text {
-  display: flex;
-  align-items: center;
-  padding: .375rem .75rem;
-  font-size: 0.6rem;
-  font-weight: 400;
-  line-height: 2.5;
-  color: #212529;
-  text-align: center;
-  white-space: nowrap;
-  border: 1px solid #ced4da;
-  border-radius: .25rem;
-}
-*, ::after, ::before {
-  padding: 0;
-  box-sizing: none;
-}
-
-.navbar {
-  position: relative;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  padding-top: .3rem;
-  padding-bottom: .3rem;
-}
-
-.navbar-toggler {
-  padding: 0;
-  font-size: 1.06rem;
-  background-color: transparent;
-  border: 1px solid transparent;
-  border-radius: .25rem;
-  transition: box-shadow .15s ease-in-out;
-}
-
-.css-1a5icme.Mui-checked {
-  color: #212529;
-}
-
-.css-1a5icme {
-  padding: 6px;
-  
-}
-
-#table th{
-  font-size: 0.9em;
-  font-weight: 600;
-}
-#table td{
-  font-size: 0.7em;
-  font-weight: 500;
-}
-
-
-/* Frames page*/
-
-#yourcomponent1 .input-p {
-  align-items: center;
-  color: #2d2a2c;
-  display: inline-block;
-  font-size: 1.6em;
-  font-weight: 500;
-  justify-content: center;
-  margin-left: 20%;
-  padding-top: 2%;
-  position: relative;
-  text-transform: uppercase;
-}
-
-#yourcomponent1 .input {
-margin-left: 17%;
-width: 70%;
-}
-
-element.style {
-  width: 100%;
-  height: 50vh;
-}
-
-  
-}
-
-
-
-@media (min-width: 768px) {
-
-  #yourcomponent .input-p {
-    align-items: center;
-    color: #100f10;
-    display: inline-block;
-    font-size: 2em;
-    font-weight: 600;
-    justify-content: center;
-    margin-bottom: 0;
-    margin-left: 28%;
-    padding-top: 2%;
-    position: relative;
-    text-transform: uppercase;
-}
-
-#yourcomponent .input {
-  margin-left: 20%;
-  width: 60%;
-}
-
-.p-3 {
-  padding: 1rem!important;
-}
-.mb-3 {
-  margin-bottom: 0.8rem!important;
-}
-.css-9l3uo3 {
-  margin: 0px;
-  font-family: Roboto, Helvetica, Arial, sans-serif;
-  font-weight: 400;
-  font-size: 1.2rem;
-  font-size: 1.rem;
-  -height: 1.5;
-  letter-spacing: 0.00938em;
-}
-.input-group-text {
-  display: flex;
-  align-items: center;
-  padding: .375rem .75rem;
-  font-size: 1.2rem;
-  font-weight: 400;
-  line-height: 1.3;
-  color: #212529;
-  text-align: center;
-  white-space: nowrap;
-  border: 1px solid #ced4da;
-  border-radius: .25rem;
-}
-
-.css-1a5icme.Mui-checked {
-  color: #212529;
-}
-/* Frames page */
-
-
-#yourcomponent1 .input-p {
-  align-items: center;
-  color: #0c0c0c;
-  display: inline-block;
-  font-size: 2em;
-  font-weight: 600;
-  justify-content: center;
-  margin-bottom: 0;
-  margin-left: 28%;
-  padding-top: 2%;
-  position: relative;
-  text-transform: uppercase;
-}
-
-#yourcomponent1 .input {
-margin-left: 20%;
-width: 60%;
-}
-
-
-
-
-}
-
-
-
-@media (min-width: 992px) and (max-width: 1199px) {
-
-  
-  #yourcomponent .input-p {
-    align-items: center;
-    color: #0e0d0d;
-    display: inline-block;
-    font-size: 2.4em;
-    font-weight: 600;
-    justify-content: center;
-    margin-bottom: 0;
-    margin-left: 35%;
-    padding-top: 3%;
-    position: relative;
-    text-transform: uppercase;
-}
-.css-9l3uo3 {
-  margin: 2px;
-  font-family: Roboto, Helvetica, Arial, sans-serif;
-  font-weight: 500;
-  font-size: 1.6rem;
-  line-height: 2;
-  letter-spacing: 0.00938em;
-}
-
-.form-control {
-  display: block;
-  width: 100%;
-  padding: .375rem .75rem;
-  font-size: 1.3rem;
-  font-weight: 600;
-  line-height: 1.8;
-  color: #212529;
-  background-clip: padding-box;
-  border: 1px solid #ced4da;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  border-radius: .25rem;
-  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
-}
-
-.input-group-text {
-  align-items: center;
-  border: 1px solid #ced4da;
-  border-radius: .25rem;
-  color: #212529;
-  display: flex;
-  font-size: 1.2rem;
-  font-weight: 500;
-  line-height: 1.9;
-  padding: .375rem .75rem;
-  text-align: center;
-  white-space: nowrap;
-}
-.css-1a5icme.Mui-checked {
-  color: #212529;
-}
-
-#table th{
-  font-size: 1.2em;
-  font-weight: 800;
-}
-#table td{
-  font-size: 1.2em;
-  font-weight: 600;
-}
-
-#yourcomponent .input{
-  width: 30%;
-  margin-left: 30%;
-}
-
-#yourcomponent .input-group-text {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-
-/*   Frames page  */
-
- 
-#yourcomponent1 .input-p {
-  align-items: center;
-  color: #0c0b0c;
-  display: inline-block;
-  font-size: 2.4em;
-  font-weight: 600;
-  justify-content: center;
-  margin-bottom: 0;
-  margin-left: 35%;
-  padding-top: 3%;
-  position: relative;
-  text-transform: uppercase;
-}
-#yourcomponent1 .input{
-  width: 30%;
-  margin-left: 30%;
-}
-
-  
-}
-
-@media (min-width: 1200px) {
-
-  #yourcomponent  .input-p{
-    color: rgb(15, 14, 15);
-    align-items: center;
-    justify-content: center;
-    margin-left: 35%;
-    padding-top: 2%;
-    margin-bottom: 5%;
-    font-weight: bold;
-    font-size: 2em;
-    text-transform: uppercase;
-    position: relative;
-    display: inline-block;
   }
 
-  #yourcomponent .input{
-    width: 30%;
-    margin-left: 30%;
+  .input-p {
+    margin-left: 15%;
   }
-
-  .css-1a5icme {
-    display: inline-flex;
-    -webkit-box-align: center;
-    align-items: center;
-    -webkit-box-pack: center;
-    justify-content: center;
-    position: relative;
-    box-sizing: border-box;
-    -webkit-tap-highlight-color: transparent;
-    background-color: transparent;
-    outline: 0px;
-    border: 0px;
-    margin: 0px;
-    cursor: pointer;
-    user-select: none;
-    vertical-align: middle;
-    appearance: none;
-    text-decoration: none;
-    border-radius: 50%;
-    color: rgba(0, 0, 0, 0.6);
-  }
-  .css-1a5icme.Mui-checked {
-    color: #212529;
-  }
-
-  #table th{
-    font-size: 1.4em;
-    font-weight: 700;
-  }
-  #table td{
-    font-size: 1.2em;
-    font-weight: 600;
-  }
-  #yourcomponent .input-group-text {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-
-  /* Frames page */
-
-  #yourcomponent1  .input-p{
-    color: rgb(15, 14, 15);
-    align-items: center;
-    justify-content: center;
-    margin-left: 35%;
-    padding-top: 2%;
-    margin-bottom: 5%;
-    font-weight: bold;
-    font-size: 2em;
-    text-transform: uppercase;
-    position: relative;
-    display: inline-block;
-  }
-
-  #yourcomponent1 .input{
-    width: 30%;
-    margin-left: 30%;
-  }
-
-
-
-
-  
 }
 
+/* Large screens (desktops) */
+@media (min-width: 769px) {
+  #yourcomponent, #yourcomponent1 {
+    width: 50%;
+    margin-left: 25%;
+  }
+
+  .input-p {
+    margin-left: 20%;
+  }
+}
